@@ -40,8 +40,7 @@ class MyForm(QDialog):
         for list_widget in list_widgets:
             list_of_items_str = []
             items_count = list_widget.count()
-            if items_count == 0:
-                break
+
             for i in range(items_count):
                 current_item = list_widget.item(i)
                 list_of_items_str.append(current_item.text())
@@ -64,7 +63,6 @@ class MyForm(QDialog):
             
             for list_widget in list_widgets:
                 selected_items = list_widget.selectedItems()
-                
                 for item in selected_items:
                     row = list_widget.row(item)
                     list_widget.takeItem(row) 
