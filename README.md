@@ -1,5 +1,8 @@
 # Opis
-Aplikacja do tworzenia list rzeczy do zrobienia wraz z kalkulatorem bmi
+Aplikacja do tworzenia list rzeczy do zrobienia wraz z kalkulatorem bmi.
+Aplikacja zawiera 3 listy, Główna, robocza i zakończone.
+Do każdej listy można dodawać i usuwać elementy.
+**Po każdych zmianach nalerzy zapisać przyciskiem zapisz**
 
 ## Przygotowanie do uruchomienia
 1. Ściągnij wszystkie pliki do jednego folderu
