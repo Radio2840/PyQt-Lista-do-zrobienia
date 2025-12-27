@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Styl dla całego okna głównego (QWidget lub QMainWindow) */
+QWidget {
+    background-color: #2e2e2e; /* Ciemnoszary tło */
+    color: #ffffff;           /* Biały tekst */
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+
+/* Style dla list (QListWidget) */
+QListWidget {
+    background-color: #3a3a3a; /* Trochę jaśniejsze tło dla lepszego kontrastu */
+    border: 1px solid #5c5c5c;
+    selection-background-color: #0078d7; /* Kolor zaznaczenia (niebieski) */
+    selection-color: #ffffff;
+    padding: 5px;
+}
+
+QListWidget::item:selected {
+    background-color: #0078d7;
+    color: #ffffff;
+}
+
+/* Style dla etykiet (QLabel) */
+QLabel {
+    color: #ffffff;
+    padding: 2px 0;
+}
+
+/* Style dla przycisków (QPushButton) */
+QPushButton {
+    background-color: #0078d7; /* Niebieskie tło */
+    color: #ffffff;           /* Biały tekst */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #005a9e; /* Ciemniejszy niebieski po najechaniu */
+}
+
+QPushButton:pressed {
+    background-color: #003c6e; /* Jeszcze ciemniejszy po kliknięciu */
+}
+
+/* Style dla GroupBox */
+QGroupBox {
+    border: 1px solid #5c5c5c;
+    margin-top: 10px; /* Zostaw miejsce na tytuł */
+    padding: 10px;
+    background-color: #3a3a3a;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    color: #ffffff;
+    background-color: #3a3a3a;
+}
+
+/* Style dla pól wyboru (QCheckBox) */
+QCheckBox {
+    color: #ffffff;
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #3a3a3a;
+    border: 1px solid #5c5c5c;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #0078d7; /* Niebieski po zaznaczeniu */
+    border: 1px solid #0078d7;
+    image: url(path/to/check.png); /* Własna ikona zaznaczenia (opcjonalnie) */
+}
+
+/* Style dla edytora tekstu (QTextEdit) */
+QTextEdit {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #5c5c5c;
+    padding: 5px;
+}</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>961</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Dodaj do:</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>20</y>
+         <width>451</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="check_box_main_list">
+          <property name="text">
+           <string>Głównej listy</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="check_box_draft_list">
+          <property name="text">
+           <string>Roboczej listy</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="check_box_done_list">
+          <property name="text">
+           <string>Zakończone</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="not_important_list_name">
+          <property name="font">
+           <font>
+            <family>Arial,sans-serif</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Robocza lista</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="draft_list"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="done_list_name">
+          <property name="font">
+           <font>
+            <family>Arial,sans-serif</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Zakończone</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="done_list"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTextEdit" name="textEdit">
+      <property name="placeholderText">
+       <string>Napisz element do dodania</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="main_list_name">
+        <property name="font">
+         <font>
+          <family>Arial,sans-serif</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Główna Lista</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="main_list"/>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="add_button">
+      <property name="font">
+       <font>
+        <family>Arial,sans-serif</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dodaj</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="delete_button">
+      <property name="font">
+       <font>
+        <family>Arial,sans-serif</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Usuń zaznaczone</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>961</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="2" column="0">
+     <widget class="QPushButton" name="save_to_file_button">
+      <property name="text">
+       <string>Zapisz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Zapisz do pliku</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="calculate_button">
+      <property name="text">
+       <string>Oblicz BMI</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Waga</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="weight_spin_box">
+          <property name="maximum">
+           <double>999.990000000000009</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Wzrost</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="height_spin_box">
+          <property name="maximum">
+           <double>999.990000000000009</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="bmi_value_label">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>500</y>
+     <width>481</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Twoje BMI wynosi:</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
