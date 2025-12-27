@@ -10,3 +10,4 @@ Aplikacja do tworzenia list rzeczy do zrobienia wraz z kalkulatorem bmi
 
 ## Uruchomienie testów
 1. W terminalu wpisz komendę `pytest tests.py`
+2. Dokładniejszy widok testów `pytest -v tests.py`
