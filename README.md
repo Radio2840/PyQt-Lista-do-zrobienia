@@ -18,3 +18,6 @@ Do każdej listy można dodawać i usuwać elementy.
 ## Uruchomienie testów
 1. W terminalu wpisz komendę `pytest tests.py`
 2. Dokładniejszy widok testów `pytest -v tests.py`
+    - Podobnie jak z instalacją w razie problemów proszę spróbować następujących komend
+        - `py -m pytest -v tests.py`
+        - `python -m pytest -v tests.py`
