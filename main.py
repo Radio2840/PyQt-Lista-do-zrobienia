@@ -79,6 +79,7 @@ class MyForm(QDialog):
             self.add_to_done_list(text_to_add)
         if self.tuple_of_checkBox_statuses['draft']:
             self.add_to_draft_list(text_to_add)
+        self.ui.textEdit.setText("")
 
     def add_to_main_list(self, text_to_add):
         main_list = self.ui.main_list
