@@ -11,6 +11,7 @@ Do każdej listy można dodawać i usuwać elementy.
 2. Odpal ten folder w środowisku programistycznym np. visual studio code
     - W przypadku visual studio code musimy zainstalować wstyczkę python do kompilacji kodu
 3. W terminalu środowiska wpisz komendę `pip install -r requariaments.txt` lub `python pip install -r requariaments.txt`
+    - W razie dalszych problemów `py -m pip install -r requariaments.txt` lub `python -m pip install -r requariaments.txt`
 4. Przejdź do pliku main.py
 5. za pomocą środowiska uruchom ten plik
 
