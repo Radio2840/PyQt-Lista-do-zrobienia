@@ -5,9 +5,12 @@ Do każdej listy można dodawać i usuwać elementy.
 **Po każdych zmianach nalerzy zapisać przyciskiem zapisz**
 
 ## Przygotowanie do uruchomienia
+### **UWAGA! Komendy działają na nowszej wersji pythona (3.13)**
+### bez odpowiedniej wersji mogą pojawić się problemy takie jak nie znalezienie paczek.
 1. Ściągnij wszystkie pliki do jednego folderu
 2. Odpal ten folder w środowisku programistycznym np. visual studio code
-3. W terminalu środowiska wpisz komendę `pip install -r requariaments.txt`
+    - W przypadku visual studio code musimy zainstalować wstyczkę python do kompilacji kodu
+3. W terminalu środowiska wpisz komendę `pip install -r requariaments.txt` lub `python pip install -r requariaments.txt`
 4. Przejdź do pliku main.py
 5. za pomocą środowiska uruchom ten plik
 
