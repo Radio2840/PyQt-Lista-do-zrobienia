@@ -1,3 +1,5 @@
+**Autor: Kinga Smolarek. Aplikacja do robienia notatek**
+
 # Opis
 Aplikacja na system Windows 10 do tworzenia list rzeczy do zrobienia wraz z kalkulatorem bmi.
 Aplikacja zawiera 3 listy, Główna, robocza i zakończone.
@@ -21,3 +23,12 @@ Do każdej listy można dodawać i usuwać elementy.
     - Podobnie jak z instalacją w razie problemów proszę spróbować następujących komend
         - `py -m pytest -v tests.py`
         - `python -m pytest -v tests.py`
+
+# Wnioski
+
+Projekt można o wiele bardziej rozwinąć np. dodać: zaznaczanie wiele elementów na raz,
+drag and drop, ładniejsze rozłożenie elementów lub dodawanie treści po wciśnięciu enter.
+Użyłam prostych rozwiązań dla ułatwienia i przyspieszenia pisania takich jak zapis do pliku.
+
+Aplikacja jest moim zdaniem trochę toporna, i trzeba by było nad nią dużo popracować, poszukać lepszych rozwiązań.
+
